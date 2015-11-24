@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html align="center">
+
+<head>
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="lib/jquery-2.1.4/jquery-2.1.4.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <title>STaRS ePassport</title>
+</head>
+
+<body>
+
+    <div data-role="page" id="pageone" style="text-transform: none">
+        <div data-role="header" data-position="fixed">
+            <h1>STaRS ePassport</h1>
+        </div>
+
+        <div data-role="main" align="center">
+            <img src="img/SST-Stars%2520logo.png" alt="Stars logo">
+            <button id="scanQR" class="ui-btn" type="button" data-inline="true">Scan QR Code</button>
+            <button id="scanNFC" class="ui-btn" type="button" disable>Scan nfc</button>
+            <a href="#pagethree" class="ui-btn" type="button" data-inline="true">Report</a>
+            <a href="#pagefour" class="ui-btn" type="button" data-inline="true">Send To Instructor</a>
+            <a href="#pagefive" class="ui-btn" type="button" data-inline="true">About</a>
+        </div>
+
+        <!--  Footer -->
+
+        <div data-role="footer" data-position="fixed">
+            <h1 style="text-transform: none">GGC ITEC 4550</h1>
+        </div>
+    </div>
+
+    <!--        Report Page -->
+
+    <div data-role="page" id="pagethree" style="text-transform: none">
+        <ul id="qrReport">
+            <li>Reports</li>
+        </ul>
+    </div>
+
+
+    <!-- Send to instructor page -->
+
+    <div data-role="page" id="pagefour" style="text-transform: none">
+        <form action="demo_form.asp" method="get">
+            Email to:
+            <input type="text" name="email">
+            <br> First name:
+            <input type="text" name="fname">
+            <br> Last name:
+            <input type="text" name="lname">
+            <br> Your course:
+            <input type="text" name="course">
+            <br> Section:
+            <input type="text" name="section">
+            <br>
+            <input type="submit" value="Submit" link="cordova.plugins.email.open">
+        </form>
+    </div>
+
+    <!-- about page -->
+
+    <div data-role="page" id="pagefive" style="text-transform: none">
+        <ul>
+            <img align="center" src="img/grizzly.jpg" alt="Grizzly">
+            <p>This applications goal is to eliminate the use of the stamp cards that are used to document each station
+                visited during the STaRS event at GGC. Each QR Code scan will act as a station that is visited, and
+                then sent to the professor for credit of the event. 
+            </p>
+            <div type="footer" data-position="fixed">
+                <h1 style="text-transform: none">By: Paco Rodriguez</h1>
+            </div>
+            
+        </ul>
+    </div>
+
+</body>
+
+</html>
